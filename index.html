@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Venda de Ingressos de Cinema</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .movie-card {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .movie-card:hover {
+            background-color: #f9f9f9;
+        }
+        .movie-poster {
+            width: 100px;
+            height: 150px;
+            margin-right: 10px;
+        }
+        .movie-info {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Venda de Ingressos de Cinema</h1>
+        <h2>Selecione um filme e horário:</h2>
+        <div class="movie-card" onclick="selectMovie(1)">
+            <img class="movie-poster" src="caminho/para/poster_do_filme1.jpg" alt="Poster do Filme 1">
+            <div class="movie-info">
+                <h3>homem aranha</h3>
+                <p>Duração: 1h 56m</p>
+                <p>Gênero: Ação,Ficção científica</p>
+            </div>
+        </div>
+        <div class="movie-card" onclick="selectMovie(2)">
+            <img class="movie-poster" src="caminho/para/poster_do_filme2.jpg" alt="Poster do Filme 2">
+            <div class="movie-info">
+                <h3>senhor dos aneis</h3>
+                <p>Duração: 2h 58m</p>
+                <p>Gênero: Alta fantasia, Fantasia heroica, Ficção de aventura, Romance de cavalaria</p>
+            </div>
+        </div>
+        <div class="movie-card" onclick="selectMovie(3)">
+            <img class="movie-poster" src="caminho/para/poster_do_filme3.jpg" alt="Poster do Filme 3">
+            <div class="movie-info">
+                <h3>Guardiões da Galáxia Vol 3
+                <p>Duração: 2h 29m</p>
+                <p>Gênero: Ação/Ficção científica</p>
+            </div>
+        </div>
+        <h3>Informações do Filme Selecionado:</h3>
+        <div id="selected-movie-info">
+            <p>Selecione um filme para ver as informações.</p>
+        </div>
+    </div>
+
+    <script>
+            let selectedMovieName;
+            switch (movieId) {
+                case 1:
+                    selectedMovieName = "Filme 1";
+                    break;
+                case 2:
+                    selectedMovieName = "Filme 2";
+                    break;
+                case 3:
+                    selectedMovieName = "Filme 3";
+                    break;
+                default:
+                    selectedMovieName = "Nenhum filme selecionado";
+                    break;
+            }
+
+            alert("Filme selecionado: " + selectedMovieName);
+    </script>
+</body>
+</html>
